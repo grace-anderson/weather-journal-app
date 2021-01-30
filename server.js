@@ -3,6 +3,7 @@ projectData = {};
 
 // Require Express to run server and routes
 
+
 // Start up an instance of app
 
 /* Middleware*/
@@ -17,3 +18,11 @@ app.use(express.static('website'));
 
 
 // Setup Server
+// Spin up the server
+// Callback to debug
+
+// Initialize all route with a callback function
+
+// Callback function to complete GET '/all'
+
+// Post Route
