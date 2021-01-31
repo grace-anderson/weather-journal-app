@@ -22,10 +22,12 @@ This project created an asynchronous web app that uses Web API and user data to 
 
 ## APIs and Routes
 ###App API end point
-*JavaScript Object named projectData is initiated in the file server.js to act as the app API endpoint.
+* JavaScript Object named projectData is initiated in the file server.js to act as the app API endpoint.
 
-
-
+###Integrating OpenWeatherMap API
+* Personal API Key for OpenWeatherMap API is saved in a named const variable
+* The API Key variable is passed as a parameter to fetch()
+* Data is successfully returned from the external API.
 
 ## Extras
 

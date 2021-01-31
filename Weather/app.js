@@ -16,7 +16,7 @@ const key = 'b279d2dc68159b9a66df281d1f671494';
 getServerData();
 
 // Event listener to add function to existing HTML DOM element
-document.getElementById("generate").addEventListener("click", press);
+generate.addEventListener('click', press);
 
 /* Function called by event listener */
 
