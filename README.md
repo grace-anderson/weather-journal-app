@@ -46,16 +46,16 @@ This project created an asynchronous web app that uses Web API and user data to 
 * the input element uses city, as zip code does not work consistently with Australian or NZ codes. IDs etc updated from zip to city
 ### Assigning Element Properties Dynamically
 * the div with the id, entryHolder, has child divs with the ids:
-**date
-**temp
-**location
-**content
+    - date
+    - temp
+    - location
+    - content
 ### Event Listeners
 * In app.js file, the 'Get weather' button has an id of 'generate' and an event listener (addEventListener()), click is the first parameter, and callback function (retrieve) as is second parameter. 
 * Clicking the 'Get weather' button initiates retrieval of the data to display in the UI
 ### Dynamically Update UI
 * properties of existing HTML elements are set from the dom
-* the async function retrieves the app’s data on the client side  (getServerData())
-* existing DOM elements should have their innerHTML properties dynamically set according to data returned by the app route.(updateUI())
+* the async function retrieves the app’s data on the client side (getServerData())
+* existing DOM elements have their innerHTML properties dynamically set according to data returned by the app route.(updateUI())
 
 # weather-journal-app
