@@ -1,7 +1,8 @@
 /* Global Variables */
 const generate = document.querySelector('.generate');
 const description = document.querySelector('textarea');
-const zipcode = document.querySelector('input');
+// const zipcode = document.querySelector('input');
+const cityName = document.querySelector('input');
 
 const KELVIN = 273;
 // Create a new date instance dynamically with JS
@@ -22,21 +23,22 @@ generate.addEventListener('click', press);
 
 function press() {
     let desValue = description.value;
-    let zipValue = zipcode.value;
+    let cityValue = cityName.value;
 
-    getWeather(zipValue, desValue).then(() => {
+    getWeather(cityValue, desValue).then(() => {
         getServerData();
     });
 }
 
 /* Function to GET Web API Data*/
-function getWeather(zip, des) {
-    //check if the zip is empty
-    if (zip == '') {
+function getWeather(city, des) {
+    //check if city is empty
+    if (city == '') {
         return;
     }
     //api
-    let api = `http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=${key}`;
+    // let api = `http://api.openweathermap.org/data/2.5/weather?zip=${city},us&appid=${key}`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
     console.log(api);
     //fetch api
     return fetch(api)
