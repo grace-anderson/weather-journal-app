@@ -1,15 +1,13 @@
 /* Global Variables */
 const generate = document.querySelector('.generate');
 const description = document.querySelector('textarea');
-// const zipcode = document.querySelector('input');
 const cityName = document.querySelector('input');
 
-const KELVIN = 273;
-// Create a new date instance dynamically with JS
+// Create a new date instance dynamically with JS, UK/Aus/NZ format
 let d = new Date();
-let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear();
+let newDate = d.getDate() + '/' + d.getMonth() + 1 + '/' + d.getFullYear();
 
-// Personal API Key for OpenWeatherMap API
+// Key for OpenWeatherMap (see https://openweathermap.org/)
 const key = 'b279d2dc68159b9a66df281d1f671494';
 
 //------------------------------------------------------------------//
@@ -17,11 +15,11 @@ const key = 'b279d2dc68159b9a66df281d1f671494';
 getServerData();
 
 // Event listener to add function to existing HTML DOM element
-generate.addEventListener('click', press);
+generate.addEventListener('click', retrieve);
 
 /* Function called by event listener */
 
-function press() {
+function retrieve() {
     let desValue = description.value;
     let cityValue = cityName.value;
 
@@ -36,9 +34,8 @@ function getWeather(city, des) {
     if (city == '') {
         return;
     }
-    //api
-    // let api = `http://api.openweathermap.org/data/2.5/weather?zip=${city},us&appid=${key}`;
-    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
+    //api - retrieve city data, with temp in metric units
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
     console.log(api);
     //fetch api
     return fetch(api)
@@ -47,7 +44,7 @@ function getWeather(city, des) {
             return data;
         })
         .then(function (data) {
-            const temperature = Math.floor(data.main.temp - KELVIN);
+            const temperature = Math.floor(data.main.temp);
             const description = data.weather[0].description;
             const icon = data.weather[0].icon;
             const city = data.name;
@@ -55,6 +52,8 @@ function getWeather(city, des) {
             const userText = des; //add the user description
             postData('/add', {
                 temperature,
+
+
                 description,
                 icon,
                 city,
@@ -71,8 +70,8 @@ async function postData(url, data) {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
-        // Body data type must match "Content-Type" header
-        body: JSON.stringify(data),
+        // Body data type must match "Content-Type" header = i.e. json
+        body: JSON.stringify(data), //convert strings from server
     });
 }
 

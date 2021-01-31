@@ -16,7 +16,7 @@ const cors = require('cors');
 app.use(cors());
 
 /* Initialize the main project folder*/
-app.use(express.static('Weather'));
+app.use(express.static('weatherApp'));
 
 const port = 3000;
 /* Spin up the server*/
