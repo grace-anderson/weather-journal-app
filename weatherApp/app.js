@@ -94,7 +94,7 @@ const content = document.getElementById('content');
 function updateUI(weather) {
     console.log(weather);
 
-    icon.innerHTML = `<img src="svg/${weather.icon}.svg" alt="nothing yet" />`;
+    icon.innerHTML = `<img src="svg/${weather.icon}.png" alt="nothing yet" />`; //svg
     temp.innerHTML = `${weather.temperature}°C`;
     date.innerHTML = weather.newDate ? weather.newDate : '';
     place.innerHTML = weather.city ? weather.city : '';
