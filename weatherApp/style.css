@@ -3,13 +3,12 @@
 
 body {
   margin: 0;
-  background-color: #1d3557;
   font-family: "Poppins", sans-serif;
 }
 
 #app {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: none;
   width: 700px;
   height: 900px;
   position: absolute;
@@ -17,7 +16,6 @@ body {
   right: 50%;
   transform: translate(50%, -50%);
   border-radius: 20px;
-  box-shadow: 20px 20px #14213d;
 }
 
 #app > .title {
@@ -75,7 +73,7 @@ textarea {
     transform: translateY(-50px);
 } */
 
-.icon > img {
+img {
     position: fixed;
     top: 0;
     left: 0;
