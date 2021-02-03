@@ -1,77 +1,92 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url(@import url(@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap');
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-#app {
+  font-family: 'Work Sans', sans-serif;
+  color: white;
   text-align: center;
-  background-color: none;
-  width: 700px;
-  height: 900px;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  border-radius: 20px;
+  background: black;
 }
 
-#app > .title {
-  background-color: white;
-  height: 100px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  line-height: 100px;
-  font-size: 3em;
+.title {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0.6em 0 0.4em 0;
+}
+
+.text {
+   margin-top: 0.2em;
+    font-weight: 500;
+    font-size: 1.4em;
 }
 
 .zip {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
 }
 
 #city {
   width: 70%;
-  height: 50px;
-  font-size: 1.5em;
-  border-radius: 10px;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid dimgray;
-  padding-left: 10px;
+  font-size: 1.4em;
+  height: 1.6em;
+  border-radius: 5px;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  border: none;
+  opacity: 0.2;
 }
 textarea {
-  padding-left: 10px;
-  width: 70%;
-  height: 100px;
-  border-radius: 10px;
-  font-size: 1.5em;
-  font-family: "Poppins", sans-serif;
+    width: 70%;
+    font-size: 1.4em;
+    padding-top: 20px;
+    padding-bottom:10px;
+    border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    vertical-align: center;
+    border: none;
+    opacity: 0.2;
 }
 
+/* placeholder text */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+    opacity: 1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+    opacity: 1;
+  }
+
 .generate {
-  background-color: #006d77;
+  background-color: black;
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
-  width: 80%;
-  height: 80px;
+  width: 50%;
+  height: 50px;
   transform: translateX(-50%);
-  border-radius: 40px;
-  line-height: 80px;
+  border-radius: 20px;
+  line-height: 50px;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  text-transform: uppercase
+
 }
 
 .generate:hover {
-  background-color: #00a896;
+  background-color: white;
+  opacity: 0.5;
+  color: black;
 }
-
-/* .icon > img {
-    width: 42%;
-    transform: translateY(-50px);
-} */
 
 img {
     position: fixed;
@@ -87,25 +102,29 @@ img {
   width: 60%;
   margin-left: 50%;
   transform: translateX(-50%);
-  font-size: 1.2em;
+  font-family: 'Caveat', cursive;
+  font-size: 1.6em;
+  font-weight: 500;
 }
 
 #temp {
-  font-family: "Manrope", sans-serif;
-  font-size: 3.5em;
-  margin-top: -80px;
+font-family: 'Caveat', cursive;
+  font-size: 2em;
+  font-weight: 500;
+  /* margin-top: -80px; */
 }
 #location,
 #date {
-  color: dimgrey;
   margin: 5px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.6em;
+  font-weight: 500;
 }
-@media (max-width: 850px) {
-  #app {
-    width: 350px;
-    height: 700px;
-  }
-  #app > .title {
-    font-size: 1.8em;
-  }
-}
+
+@media (min-width: 700px) {
+
+.title {
+    font-size: 3em;
+}  
+
+};;;
