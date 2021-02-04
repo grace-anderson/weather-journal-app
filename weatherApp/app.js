@@ -88,6 +88,7 @@ const temp = document.getElementById('temp');
 const date = document.getElementById('date');
 const place = document.getElementById('location');
 const content = document.getElementById('content');
+const wthDescr = document.getElementById('weatherDescr');
 
 function updateUI(weather) {
     console.log(weather);
@@ -97,4 +98,5 @@ function updateUI(weather) {
     date.innerHTML = weather.newDate ? weather.newDate : '';
     place.innerHTML = weather.city ? weather.city : '';
     content.innerHTML = weather.userText ? weather.userText : '';
+    wthDescr.innerHTML = weather.description ? weather.description : '';
 }

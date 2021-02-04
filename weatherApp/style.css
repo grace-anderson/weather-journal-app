@@ -37,6 +37,7 @@ body {
   border: none;
   opacity: 0.2;
 }
+
 textarea {
     width: 70%;
     font-size: 1.4em;
@@ -113,6 +114,13 @@ font-family: 'Caveat', cursive;
   font-weight: 500;
   /* margin-top: -80px; */
 }
+
+#weatherDescr {
+    font-family: 'Caveat', cursive;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
 #location,
 #date {
   margin: 5px;
