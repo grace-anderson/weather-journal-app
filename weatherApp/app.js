@@ -52,8 +52,6 @@ function getWeather(city, des) {
             const userText = des; //add the user description
             postData('/add', {
                 temperature,
-
-
                 description,
                 icon,
                 city,
@@ -94,7 +92,7 @@ const content = document.getElementById('content');
 function updateUI(weather) {
     console.log(weather);
 
-    icon.innerHTML = `<img src="svg/${weather.icon}.png" alt="nothing yet" />`; //svg
+    icon.innerHTML = `<img src="img/${weather.icon}.png" alt="waiting"/>`; //background image
     temp.innerHTML = `${weather.temperature}°C`;
     date.innerHTML = weather.newDate ? weather.newDate : '';
     place.innerHTML = weather.city ? weather.city : '';
