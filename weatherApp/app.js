@@ -3,7 +3,7 @@ const generate = document.querySelector('.generate');
 const description = document.querySelector('textarea');
 const cityName = document.querySelector('input');
 
-// Create a new date instance dynamically with JS, UK/Aus/NZ format
+// Create a new date instance dynamically with JS, display in UK/Aus/NZ format
 let d = new Date();
 let newDate = d.getDate() + '/' + d.getMonth() + 1 + '/' + d.getFullYear();
 
@@ -87,6 +87,7 @@ const icon = document.getElementById('icon');
 const temp = document.getElementById('temp');
 const date = document.getElementById('date');
 const place = document.getElementById('location');
+const country = document.getElementById('country');
 const content = document.getElementById('content');
 const wthDescr = document.getElementById('weatherDescr');
 
@@ -97,6 +98,7 @@ function updateUI(weather) {
     temp.innerHTML = `${weather.temperature}°C`;
     date.innerHTML = weather.newDate ? weather.newDate : '';
     place.innerHTML = weather.city ? weather.city : '';
+    country.innerHTML = weather.country ? weather.country : '';
     content.innerHTML = weather.userText ? weather.userText : '';
     wthDescr.innerHTML = weather.description ? weather.description : '';
 }
