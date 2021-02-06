@@ -5,7 +5,7 @@ const cityName = document.querySelector('input');
 
 // Create a new date instance dynamically with JS, display in UK/Aus/NZ format
 let d = new Date();
-let newDate = d.getDate() + '/' + d.getMonth() + 1 + '/' + d.getFullYear();
+let newDate = d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
 
 // Key for OpenWeatherMap (see https://openweathermap.org/)
 const key = 'b279d2dc68159b9a66df281d1f671494';
