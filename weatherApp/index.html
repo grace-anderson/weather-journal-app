@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Document</title>
-    </head>
-    <body>
-       <div class="icon" id="icon">
-                <img src="img/unknown.png" alt="waiting" />
-            </div>
-        <div id="app">
-            <div class="title">My Weather Journal</div>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="icon" id="icon">
+        <img src="img/unknown.png" alt="waiting" />
+    </div>
+    <div id="app">
+        <div class="title">My Weather Journal</div>
+        <div id="collect">
             <div class="zip">
                 <input type="text" id="city" placeholder="Enter your city ..." />
             </div>
             <div class="zip">
                 <input type="text" id="countryCode" placeholder="... and country code" />
             </div>
+            <div id="getCountry">find country code</div>
             <div class="holder feel">
-                <textarea
-                    class="myInput"
-                    id="feelings"
-                    placeholder="How do you feel today?"
-                ></textarea>
+                <textarea class="myInput" id="feelings" placeholder="How do you feel today?"></textarea>
             </div>
-
-            <div class="entry">
-                <div id="entryHolder">
-                    <div class="text">Today is</div>
-                    <div id="date"></div>
-                    <div class="text">I'm in</div>
-                    <div id="cityCountry"><span id="location"></span>, <span id="country"></span></div>
-                    <div class="text">The weather is ...</div>
-                    <div id="weatherDescr"></div>
-                    <div class="text">... with a temperature of</div>
-                    <div id="temp">°C</div>
-                    <div class="text">And I feel</div>
-                    <div id="content"></div>
-                </div>
-            </div>
-
             <div class="generate">get weather</div>
         </div>
-        <script src="app.js"></script>
-    </body>
+        <div class="entry">
+            <div id="entryHolder">
+                <div class="text">Today is</div>
+                <div id="date"></div>
+                <div class="text">I'm in</div>
+                <div id="cityCountry"><span id="location"></span>, <span id="country"></span></div>
+                <div class="text">The weather is ...</div>
+                <div id="weatherDescr"></div>
+                <div class="text">... with a temperature of</div>
+                <div id="temp">°C</div>
+                <div class="text">And I feel</div>
+                <div id="content"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>

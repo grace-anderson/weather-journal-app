@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap");
+@import url("reset.css");
 
 body {
   margin: 0;
@@ -9,27 +10,41 @@ body {
   background: black;
 }
 
-.title {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 0.6em 0 0.4em 0;
-}
-
 .text {
   margin-top: 0.2em;
   font-weight: 500;
   font-size: 1.4em;
 }
 
-
-/* this is for the city collection field */
-.zip {
-  margin-top: 0.2em;
-  margin-bottom: 0.6em;
+#app {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title"
+    "city"
+    "country"
+    "getCountry"
+    "feelings"
+    "getWeather"
+    "entry"
 }
 
+/* page heading */
+.title {
+  grid-area: title;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0.6em 0 0.4em 0;
+}
+
+/* this is for the city data entry field */
 #city {
+  grid-area: city;
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
   width: 70%;
   font-size: 1.4em;
   height: 1.6em;
@@ -37,24 +52,48 @@ body {
   font-family: "Work Sans", sans-serif;
   text-align: center;
   border: none;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
-/* this is for the country code collection field */
-  
-  #countryCode {
-    width: 70%;
-    font-size: 1.4em;
-    height: 1.6em;
-    border-radius: 5px;
-    font-family: "Work Sans", sans-serif;
-    text-align: center;
-    border: none;
-    opacity: 0.2;
-  }
+/* this is for the country code data entry field */
+#countryCode {
+  grid-area: country;
+  margin-top: 0.1em;
+  margin-bottom: 0.6em;
+  width: 70%;
+  font-size: 1.4em;
+  height: 1.6em;
+  border-radius: 5px;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  border: none;
+  opacity: 0.5;
+}
+
+#getCountry {
+  grid-area: getCountry;
+  background-color: black;
+  position: relative;
+  width: 50%;
+  margin: 1em 0 2em 25%;
+  padding: 5px 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: center;
+}
+
+#getCountry:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+}
 
 textarea {
-  width: 70%;
+  grid-area: feelings;
+  width: 90%;
   font-size: 1.4em;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -63,7 +102,31 @@ textarea {
   text-align: center;
   vertical-align: center;
   border: none;
-  opacity: 0.2;
+  opacity: 0.5;
+}
+
+.generate {
+  grid-area: getWeather;
+  background-color: black;
+  position: relative;
+  width: 50%;
+  margin: 1em 0 1em 25%;
+  padding: 10px 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.generate:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+}
+
+.entry {
+ grid-area: entry;
 }
 
 /* placeholder text */
@@ -85,27 +148,6 @@ textarea {
   opacity: 1;
 }
 
-.generate {
-  background-color: black;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  width: 50%;
-  height: 50px;
-  transform: translateX(-50%);
-  border-radius: 20px;
-  line-height: 50px;
-  color: white;
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-.generate:hover {
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-}
-
 img {
   position: fixed;
   top: 0;
@@ -115,6 +157,8 @@ img {
   min-height: 100%;
   z-index: -1;
 }
+
+
 
 #temp,
 #content,
@@ -142,5 +186,4 @@ img {
     font-size: 3em;
     font-weight: 500;
   }
-
 } ;
