@@ -1,8 +1,8 @@
 /* Global Variables */
 const generate = document.querySelector('.generate');
-const description = document.querySelector('textarea');
+const description = document.querySelector('#feelings');
 const cityName = document.querySelector('input');
-const countryCode = document.querySelector('countryCode'); //***************** */
+const countryName = document.querySelector('#countryCode'); 
 const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
 // Create a new date instance dynamically with JS, display in UK/Aus/NZ format
@@ -20,24 +20,24 @@ getServerData();
 generate.addEventListener('click', retrieve);
 
 /* Function called by event listener */
-
 function retrieve() {
     let desValue = description.value;
     let cityValue = cityName.value;
+    let countryValue = countryName.value; 
 
-    getWeather(cityValue, desValue).then(() => {
+    getWeather(cityValue, desValue, countryValue).then(() => { 
         getServerData();
     });
 }
 
 /* Function to GET Web API Data*/
-function getWeather(city, des) {
+function getWeather(city, des, country) { 
     //check if city is empty
     if (city == '') {
         return;
     }
     //api - retrieve city data, with temp in metric units
-    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${key}`;
     console.log(api);
     //fetch api
     return fetch(api)
@@ -50,8 +50,8 @@ function getWeather(city, des) {
             const description = data.weather[0].description;
             const icon = data.weather[0].icon;
             const city = data.name;
-            const country = data.sys.country;
-            const userText = des; //add the user description
+            const country = data.sys.country; 
+            const userText = des; //add the user description for feelings
             postData('/add', {
                 temperature,
                 description,
@@ -92,6 +92,7 @@ const place = document.getElementById('location');
 const country = document.getElementById('country');
 const content = document.getElementById('content');
 const wthDescr = document.getElementById('weatherDescr');
+
 
 function updateUI(weather) {
     console.log(weather);

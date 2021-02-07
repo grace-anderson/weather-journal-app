@@ -40,13 +40,22 @@ body {
   opacity: 0.2;
 }
 
-/* this is for the country collection field */
-.countryCode {
-    margin-top: 0.2em;
-    margin-bottom: 0.6em;
-  }
+/* this is for the state code collection field */
   
-  #CountryCodeID {
+#stateCode {
+  width: 70%;
+  font-size: 1.4em;
+  height: 1.6em;
+  border-radius: 5px;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  border: none;
+  opacity: 0.2;
+}
+
+/* this is for the country code collection field */
+  
+  #countryCode {
     width: 70%;
     font-size: 1.4em;
     height: 1.6em;
@@ -120,19 +129,12 @@ img {
   z-index: -1;
 }
 
-#temp {
-  margin: 0.2em 0 0.6em 0;
-  font-family: "Caveat", cursive;
-  font-size: 2.4em;
-  font-weight: 500;
-  /* margin-top: -80px; */
-}
-
+#temp,
 #content,
 #weatherDescr,
 #cityCountry,
 #date {
-  margin: 0.2em 0 0.4em 0;
+  margin: 0.1em 0 0.2em 0;
   font-family: "Caveat", cursive;
   font-size: 2em;
   font-weight: 500;
@@ -142,4 +144,16 @@ img {
   .title {
     font-size: 3em;
   }
-} ;;;
+
+  #temp,
+  #content,
+  #weatherDescr,
+  #cityCountry,
+  #date {
+    margin: 0.2em 0 0.4em 0;
+    font-family: "Caveat", cursive;
+    font-size: 3em;
+    font-weight: 500;
+  }
+
+} ;
