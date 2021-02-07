@@ -40,19 +40,6 @@ body {
   opacity: 0.2;
 }
 
-/* this is for the state code collection field */
-  
-#stateCode {
-  width: 70%;
-  font-size: 1.4em;
-  height: 1.6em;
-  border-radius: 5px;
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  border: none;
-  opacity: 0.2;
-}
-
 /* this is for the country code collection field */
   
   #countryCode {

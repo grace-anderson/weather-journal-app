@@ -2,7 +2,7 @@
 const generate = document.querySelector('.generate');
 const description = document.querySelector('#feelings');
 const cityName = document.querySelector('input');
-const countryName = document.querySelector('#countryCode'); 
+const countryName = document.querySelector('#countryCode');  
 const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
 // Create a new date instance dynamically with JS, display in UK/Aus/NZ format
