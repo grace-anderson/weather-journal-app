@@ -29,6 +29,7 @@ body {
     "feelings"
     "getWeather"
     "entry"
+    "getMore"
 }
 
 /* page heading */
@@ -58,8 +59,7 @@ body {
 /* this is for the country code data entry field */
 #countryCode {
   grid-area: country;
-  margin-top: 0.1em;
-  margin-bottom: 0.6em;
+  margin-top: 0.1em 0;
   width: 70%;
   font-size: 1.4em;
   height: 1.6em;
@@ -70,12 +70,12 @@ body {
   opacity: 0.5;
 }
 
-#getCountry {
+.getCountry {
   grid-area: getCountry;
   background-color: black;
   position: relative;
   width: 50%;
-  margin: 1em 0 2em 25%;
+  margin: 1em 0 1em 25%;
   padding: 5px 0;
   border-radius: 20px;
   color: white;
@@ -85,7 +85,7 @@ body {
   vertical-align: center;
 }
 
-#getCountry:hover {
+.getCountry:hover {
   background-color: white;
   opacity: 0.5;
   color: black;
@@ -125,8 +125,29 @@ textarea {
   color: black;
 }
 
-.entry {
+#entryHolder {
  grid-area: entry;
+}
+
+.getMore {
+  grid-area: getMore;
+  background-color: black;
+  position: relative;
+  width: 50%;
+  margin: 1em 0 1em 25%;
+  padding: 5px 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  vertical-align: center;
+}
+
+.getCountry:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: black;
 }
 
 /* placeholder text */

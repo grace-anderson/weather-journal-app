@@ -4,8 +4,10 @@ const description = document.querySelector("#feelings");
 const cityName = document.querySelector("input");
 const countryName = document.querySelector("#countryCode");
 const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
-const findCountryCode = document.querySelector("#getCountry");
+const findCountryCode = document.querySelector(".getCountry");
 const collectSection = document.querySelector("#collect");
+const openWeather = document.querySelector(".getMore");
+const entryWeather = document.querySelector(".entry");
 
 // Create a new date instance dynamically with JS, display in UK/Aus/NZ format
 let d = new Date();
@@ -31,7 +33,9 @@ function retrieve() {
     getServerData();
   });
 
+//hide the data entry fields, so retrieved results display on page
   collectSection.style.display = "none";
+  entryWeather.style.display = "initial";
 
 }
 
@@ -104,11 +108,11 @@ function updateUI(weather) {
   icon.innerHTML = `<img src="img/${weather.icon}.png" alt="waiting"/>`; //background image
   temp.innerHTML = `${weather.temperature}°C`;
   date.innerHTML = weather.newDate ? weather.newDate : "";
-  place.innerHTML = weather.city ? weather.city : "";
+  place.innerHTML = weather.city ? weather.city + ", " : "";
   country.innerHTML = weather.country
     ? regionNamesInEnglish.of(weather.country)
     : "";
-  content.innerHTML = weather.userText ? weather.userText + ", " : "";
+  content.innerHTML = weather.userText ? weather.userText : "";
   wthDescr.innerHTML = weather.description ? weather.description : "";
 }
 
@@ -118,3 +122,14 @@ function openCountryCode() {
 }
 
 findCountryCode.addEventListener("click", openCountryCode);
+
+//const openWeather = document.querySelector(".getMore");
+function openWeatherCollect () {
+    collectSection.style.display = "initial";
+    entryWeather.style.display = "none";
+    document.getElementById('city').value = '';
+    document.getElementById('countryCode').value = '';
+    document.getElementById('feelings').value = '';
+}
+
+openWeather.addEventListener("click", openWeatherCollect);
