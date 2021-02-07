@@ -35,6 +35,7 @@ function retrieve() {
 
 //hide the data entry fields, so retrieved results display on page
   collectSection.style.display = "none";
+  //make sure entered weather displays
   entryWeather.style.display = "initial";
 
 }
