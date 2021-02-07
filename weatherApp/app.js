@@ -2,6 +2,8 @@
 const generate = document.querySelector('.generate');
 const description = document.querySelector('textarea');
 const cityName = document.querySelector('input');
+const countryCode = document.querySelector('countryCode'); //***************** */
+const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
 
 // Create a new date instance dynamically with JS, display in UK/Aus/NZ format
 let d = new Date();
@@ -98,7 +100,7 @@ function updateUI(weather) {
     temp.innerHTML = `${weather.temperature}°C`;
     date.innerHTML = weather.newDate ? weather.newDate : '';
     place.innerHTML = weather.city ? weather.city : '';
-    country.innerHTML = weather.country ? weather.country : '';
+    country.innerHTML = weather.country ? regionNamesInEnglish.of(weather.country): '';
     content.innerHTML = weather.userText ? weather.userText : '';
     wthDescr.innerHTML = weather.description ? weather.description : '';
 }

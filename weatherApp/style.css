@@ -1,27 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: white;
   text-align: center;
   background: black;
 }
 
 .title {
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0.6em 0 0.4em 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0.6em 0 0.4em 0;
 }
 
 .text {
-   margin-top: 0.2em;
-    font-weight: 500;
-    font-size: 1.4em;
+  margin-top: 0.2em;
+  font-weight: 500;
+  font-size: 1.4em;
 }
 
+
+/* this is for the city collection field */
 .zip {
   margin-top: 0.2em;
   margin-bottom: 0.6em;
@@ -32,40 +34,60 @@ body {
   font-size: 1.4em;
   height: 1.6em;
   border-radius: 5px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   text-align: center;
   border: none;
   opacity: 0.2;
 }
 
-textarea {
+/* this is for the country collection field */
+.countryCode {
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+  }
+  
+  #CountryCodeID {
     width: 70%;
     font-size: 1.4em;
-    padding-top: 20px;
-    padding-bottom:10px;
+    height: 1.6em;
     border-radius: 5px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     text-align: center;
-    vertical-align: center;
     border: none;
     opacity: 0.2;
+  }
+
+textarea {
+  width: 70%;
+  font-size: 1.4em;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  vertical-align: center;
+  border: none;
+  opacity: 0.2;
 }
 
 /* placeholder text */
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: black;
-    opacity: 1;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
-    opacity: 1;
-  }
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+  opacity: 1;
+}
 
 .generate {
   background-color: black;
@@ -79,8 +101,7 @@ textarea {
   line-height: 50px;
   color: white;
   font-size: 1.2em;
-  text-transform: uppercase
-
+  text-transform: uppercase;
 }
 
 .generate:hover {
@@ -90,49 +111,35 @@ textarea {
 }
 
 img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-#content {
-  width: 60%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Caveat', cursive;
-  font-size: 1.6em;
-  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
 #temp {
-font-family: 'Caveat', cursive;
-  font-size: 2em;
+  margin: 0.2em 0 0.6em 0;
+  font-family: "Caveat", cursive;
+  font-size: 2.4em;
   font-weight: 500;
   /* margin-top: -80px; */
 }
 
-#weatherDescr {
-    font-family: 'Caveat', cursive;
-  font-size: 1.6em;
-  font-weight: 500;
-}
-
-#location,
+#content,
+#weatherDescr,
+#cityCountry,
 #date {
-  margin: 5px;
-  font-family: 'Caveat', cursive;
-  font-size: 1.6em;
+  margin: 0.2em 0 0.4em 0;
+  font-family: "Caveat", cursive;
+  font-size: 2em;
   font-weight: 500;
 }
 
 @media (min-width: 700px) {
-
-.title {
+  .title {
     font-size: 3em;
-}  
-
-};;;
+  }
+} ;;;
