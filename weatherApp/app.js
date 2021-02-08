@@ -84,7 +84,7 @@ async function postData(url, data) {
   });
 }
 
-// get project data and update the UI
+// get api and feelings data and update the UI
 async function getServerData() {
   const response = await fetch("/return");
   const latestEntry = await response.json();
@@ -94,7 +94,7 @@ async function getServerData() {
   }
 }
 
-const icon = document.getElementById("icon");
+const background = document.getElementById("background");
 const temp = document.getElementById("temp");
 const date = document.getElementById("date");
 const place = document.getElementById("location");
@@ -105,7 +105,7 @@ const wthDescr = document.getElementById("weatherDescr");
 function updateUI(weather) {
   console.log(weather);
 
-  icon.innerHTML = `<img src="img/${weather.icon}.png" alt="waiting"/>`; //background image
+  background.innerHTML = `<img src="img/${weather.icon}.png" alt="waiting for background"/>`; //background image
   temp.innerHTML = `${weather.temperature}°C`;
   date.innerHTML = weather.newDate ? weather.newDate : "";
   place.innerHTML = weather.city ? weather.city + ", " : "";
@@ -120,7 +120,7 @@ function updateUI(weather) {
   });
 }
 
-//click Find country code button to open country code list website
+//click Find country code button opens country code list on wikipedia
 function openCountryCode() {
   window.open(
     "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
@@ -129,7 +129,7 @@ function openCountryCode() {
 
 findCountryCode.addEventListener("click", openCountryCode);
 
-//const openWeather = document.querySelector(".getMore");
+//click Get more weather hides the weather results and opens the weather/feelings data entry;
 function openWeatherCollect() {
   collectSection.style.display = "initial";
   entryWeather.style.display = "none";

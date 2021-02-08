@@ -1,0 +1,52 @@
+/* data entry fields css */
+.text-entry {
+  width: 70%;
+  font-size: 1.4em;
+  border-radius: 5px;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  vertical-align: center;
+  border: none;
+  opacity: 0.5;
+}
+
+/*city data entry field */
+#city {
+  grid-area: city;
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
+  height: 1.6em;
+}
+
+/*country code data entry field */
+#countryCode {
+  grid-area: country;
+  margin-top: 0.1em 0;
+  height: 1.6em;
+}
+
+/* feelings data entry */
+textarea {
+  grid-area: feelings;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/* placeholder text for data entry fields */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+  opacity: 1;
+}

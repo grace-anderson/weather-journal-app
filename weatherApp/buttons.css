@@ -1,0 +1,63 @@
+/* buttons */
+.button {
+  background-color: black;
+  position: relative;
+  vertical-align: center;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* hover state for all buttons */
+.getCountry:hover,
+.generate:hover,
+.getMore:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: black;
+}
+
+/* get country button */
+.getCountry {
+  grid-area: getCountry;
+  width: 20%;
+  margin: 1em 0 1em 40%;
+  padding: 5px 0;
+  border-radius: 50%;
+  font-size: 0.8em;
+}
+
+/* get weather button */
+.generate {
+  grid-area: getWeather;
+  width: 50%;
+  margin: 1em 0 1em 25%;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-size: 1.4em;
+}
+
+/* get more weather button */
+.getMore {
+  grid-area: getMore;
+  width: 50%;
+  margin: 1em 0 1em 25%;
+  padding: 5px 0;
+  border-radius: 20px;
+  font-size: 1.2em;
+}
+
+@media (min-width: 700px) {
+  .generate,
+  .getMore {
+    padding: 1em 0;
+  }
+
+  .getCountry {
+    width: 30%;
+    margin: 1em 0 1em 35%;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1em;
+  }
+} ;

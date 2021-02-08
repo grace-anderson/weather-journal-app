@@ -11,23 +11,23 @@
 </head>
 
 <body>
-    <div class="icon" id="icon">
+    <div class="background" id="background">
         <img src="img/unknown.png" alt="waiting" />
     </div>
     <div id="app">
         <div class="title">My Weather Journal</div>
         <div id="collect">
-            <div class="zip">
-                <input type="text" id="city" placeholder="Enter your city ..." />
+            <div class="city-country">
+                <input type="text" class="text-entry" id="city" placeholder="Enter your city ..." />
             </div>
-            <div class="zip">
-                <input type="text" id="countryCode" placeholder="... and country code" />
+            <div class="city-country">
+                <input type="text" class="text-entry" id="countryCode" placeholder="... and country code" />
             </div>
-            <div class="getCountry">find country code</div>
-            <div class="holder feel">
-                <textarea class="myInput" id="feelings" placeholder="How do you feel today?"></textarea>
+            <div class="button getCountry">find country code</div>
+            <div class="feel">
+                <textarea class="myInput text-entry" id="feelings" placeholder="How do you feel today?"></textarea>
             </div>
-            <div class="generate">get weather</div>
+            <div class="button generate">get weather</div>
         </div>
         <div class="entry">
             <div id="entryHolder">
@@ -42,7 +42,7 @@
                 <div class="text">And I feel</div>
                 <div id="content"></div>
             </div>
-            <div class="getMore">get more weather</div>
+            <div class="button getMore">get more weather</div>
         </div>
     </div>
     <script src="app.js"></script>

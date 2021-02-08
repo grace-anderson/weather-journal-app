@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap");
 @import url("reset.css");
+@import url("buttons.css");
+@import url("data-entry.css");
 
 body {
   margin: 0;
@@ -30,7 +32,7 @@ body {
     "feelings"
     "getWeather"
     "entry"
-    "getMore"
+    "getMore";
 }
 
 /* page heading */
@@ -42,137 +44,12 @@ body {
   margin: 2em 0 0.6em 0;
 }
 
-/* this is for the city data entry field */
-#city {
-  grid-area: city;
-  margin-top: 0.2em;
-  margin-bottom: 0.6em;
-  width: 70%;
-  font-size: 1.4em;
-  height: 1.6em;
-  border-radius: 5px;
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  border: none;
-  opacity: 0.5;
-}
-
-/* this is for the country code data entry field */
-#countryCode {
-  grid-area: country;
-  margin-top: 0.1em 0;
-  width: 70%;
-  font-size: 1.4em;
-  height: 1.6em;
-  border-radius: 5px;
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  border: none;
-  opacity: 0.5;
-}
-
-/* get country button */
-.getCountry {
-  grid-area: getCountry;
-  background-color: black;
-  position: relative;
-  width: 20%;
-  margin: 1em 0 1em 40%;
-  padding: 5px 0;
-  border-radius: 50%;
-  color: white;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  cursor: pointer;
-  vertical-align: center;
-}
-
-.getCountry:hover {
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-}
-
-textarea {
-  grid-area: feelings;
-  width: 70%;
-  font-size: 1.4em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  border-radius: 5px;
-  font-family: "Work Sans", sans-serif;
-  text-align: center;
-  vertical-align: center;
-  border: none;
-  opacity: 0.5;
-}
-
-/* get weather button */
-.generate {
-  grid-area: getWeather;
-  background-color: black;
-  position: relative;
-  width: 50%;
-  margin: 1em 0 1em 25%;
-  padding: 10px 0;
-  border-radius: 20px;
-  color: white;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.generate:hover {
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-}
-
 #entryHolder {
- grid-area: entry;
- margin: 0 1em;
+  grid-area: entry;
+  margin: 0 1em;
 }
 
-.getMore {
-  grid-area: getMore;
-  background-color: black;
-  position: relative;
-  width: 50%;
-  margin: 1em 0 1em 25%;
-  padding: 5px 0;
-  border-radius: 20px;
-  color: white;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  cursor: pointer;
-  vertical-align: center;
-}
-
-.getCountry:hover {
-  background-color: white;
-  opacity: 0.5;
-  color: black;
-}
-
-/* placeholder text */
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: black;
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: black;
-  opacity: 1;
-}
-
+/* background image */
 img {
   position: fixed;
   top: 0;
@@ -210,18 +87,4 @@ img {
     font-weight: 500;
   }
 
-  .generate,
-  .getMore {
-    padding: 1em 0;
-  }
-
-
-  .getCountry {
-    width: 30%;
-    margin: 1em 0 1em 35%;
-    padding: 10px 0;
-    border-radius: 20px;
-    font-size: 1em;
-  }
-
-} ;
+};
