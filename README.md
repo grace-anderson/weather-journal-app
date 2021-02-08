@@ -3,6 +3,18 @@
 ## Overview
 This project created an asynchronous web app that uses Web API and user data to dynamically update the UI. 
 
+## User experience
+### App behaviour
+* The user enters a city and (optionally) the city's country code. 
+* The country field can be used where a city exists in more than one country (e.g. Melbourne AU vs Melbourne, FL, US).
+* The user can choose to look up the country code, if needed by clicking 'Find Country Code'
+* Finally, the user enters text about their feelings.
+* Clicking the 'Get Weather retrieves the current weather for the entered city, with a background that pictures the weather. The weather is retrieved from openweathermap.org.
+* The user can then choose to look up weather for another city by clicking 'Get More Weather'
+### Responsiveness
+* The app is fully responsive, and can adapt to any screen size.
+* If the user is viewing a narrow horizontal view, the app will scroll up to the top of the screen after clicking 'Get Weather' or 'Get More Weather'.
+
 ## Project Environment Setup
 ### Node and Express environment
 * Node and Express should be installed on the local machine
