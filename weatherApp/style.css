@@ -13,12 +13,13 @@ body {
 .text {
   margin-top: 0.2em;
   font-weight: 500;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 #app {
   display: grid;
   align-items: center;
+  align-content: center;
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas:
@@ -38,7 +39,7 @@ body {
   font-size: 2em;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0.6em 0 0.4em 0;
+  margin: 2em 0 0.6em 0;
 }
 
 /* this is for the city data entry field */
@@ -70,16 +71,17 @@ body {
   opacity: 0.5;
 }
 
+/* get country button */
 .getCountry {
   grid-area: getCountry;
   background-color: black;
   position: relative;
-  width: 50%;
-  margin: 1em 0 1em 25%;
+  width: 20%;
+  margin: 1em 0 1em 40%;
   padding: 5px 0;
-  border-radius: 20px;
+  border-radius: 50%;
   color: white;
-  font-size: 1.2em;
+  font-size: 0.8em;
   text-transform: uppercase;
   cursor: pointer;
   vertical-align: center;
@@ -93,10 +95,10 @@ body {
 
 textarea {
   grid-area: feelings;
-  width: 90%;
+  width: 70%;
   font-size: 1.4em;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
   border-radius: 5px;
   font-family: "Work Sans", sans-serif;
   text-align: center;
@@ -105,6 +107,7 @@ textarea {
   opacity: 0.5;
 }
 
+/* get weather button */
 .generate {
   grid-area: getWeather;
   background-color: black;
@@ -114,7 +117,7 @@ textarea {
   padding: 10px 0;
   border-radius: 20px;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -127,6 +130,7 @@ textarea {
 
 #entryHolder {
  grid-area: entry;
+ margin: 0 1em;
 }
 
 .getMore {
@@ -179,16 +183,14 @@ img {
   z-index: -1;
 }
 
-
-
 #temp,
 #content,
 #weatherDescr,
 #cityCountry,
 #date {
-  margin: 0.1em 0 0.2em 0;
+  margin: 0.2em 0 0.3em 0;
   font-family: "Caveat", cursive;
-  font-size: 2em;
+  font-size: 2.4em;
   font-weight: 500;
 }
 
@@ -204,7 +206,22 @@ img {
   #date {
     margin: 0.2em 0 0.4em 0;
     font-family: "Caveat", cursive;
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: 500;
   }
+
+  .generate,
+  .getMore {
+    padding: 1em 0;
+  }
+
+
+  .getCountry {
+    width: 30%;
+    margin: 1em 0 1em 35%;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-size: 1em;
+  }
+
 } ;

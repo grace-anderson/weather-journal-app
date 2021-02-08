@@ -33,11 +33,10 @@ function retrieve() {
     getServerData();
   });
 
-//hide the data entry fields, so retrieved results display on page
+  //hide the data entry fields, so retrieved results display on page
   collectSection.style.display = "none";
   //make sure entered weather displays
   entryWeather.style.display = "initial";
-
 }
 
 /* Function to GET Web API Data*/
@@ -115,22 +114,32 @@ function updateUI(weather) {
     : "";
   content.innerHTML = weather.userText ? weather.userText : "";
   wthDescr.innerHTML = weather.description ? weather.description : "";
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 //click Find country code button to open country code list website
 function openCountryCode() {
-    window.open("https://www.nationsonline.org/oneworld/country_code_list.htm");
+  window.open(
+    "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
+  );
 }
 
 findCountryCode.addEventListener("click", openCountryCode);
 
 //const openWeather = document.querySelector(".getMore");
-function openWeatherCollect () {
-    collectSection.style.display = "initial";
-    entryWeather.style.display = "none";
-    document.getElementById('city').value = '';
-    document.getElementById('countryCode').value = '';
-    document.getElementById('feelings').value = '';
+function openWeatherCollect() {
+  collectSection.style.display = "initial";
+  entryWeather.style.display = "none";
+  document.getElementById("city").value = "";
+  document.getElementById("countryCode").value = "";
+  document.getElementById("feelings").value = "";
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 openWeather.addEventListener("click", openWeatherCollect);
